@@ -68,43 +68,44 @@ Conta na OpenAI (para gerar chave de API)
 2. Clonar e Instalar
 Clone este repositório:
 ```
-Bash
-
 git clone https://github.com/SEU-USUARIO/feeling-analyzer.git
 cd feeling-analyzer
 Crie e ative um ambiente virtual:
-
-Bash
 ```
+
 # Windows
+```
 python -m venv venv
 venv\Scripts\activate
 
 # macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
+```
 Instale as dependências:
-
-Bash
 ```
 pip install -r requirements.txt
+```
 3. Configurar Chaves de API
 Crie uma cópia do arquivo de exemplo .env.example:
-
-Bash
 ```
 cp .env.example .env
+```
 Abra o arquivo .env (que é ignorado pelo Git) e preencha com suas chaves secretas:
 
 Snippet de código
 
 # Chaves do Reddit
+```
 REDDIT_CLIENT_ID=YOUR_CLIENT_ID
 REDDIT_CLIENT_SECRET=YOUR_CLIENT_SECRET
 REDDIT_USER_AGENT="Feeling Analyzer v0.1 por /u/YOUR_USER"
+```
 
 # Chave da OpenAI
+```
 OPENAI_API_KEY=SUA_API_KEY_AQUI
+```
 ▶️ Como Usar
 Você precisará de dois terminais rodando simultaneamente.
 
@@ -112,25 +113,23 @@ Terminal 1: O Coletor
 Inicie o script que monitora, analisa e salva os dados.
 
 ```
-Bash
-
 python collector.py
+```
 Você verá mensagens de log no console assim que novos comentários forem encontrados e analisados. Deixe este terminal rodando.
 
 Terminal 2: O Dashboard
 Em um novo terminal (com o mesmo ambiente virtual ativado), inicie o servidor web do Streamlit.
 
-Bash
-```
 streamlit run dashboard.py
 O Streamlit abrirá automaticamente uma aba no seu navegador (normalmente em http://localhost:8501). O painel será atualizado automaticamente à medida que novos dados forem salvos no sentimentos.csv.
 
 🔧 Personalização
 Para monitorar um termo ou subreddit diferente, basta editar as constantes no topo do arquivo collector.py:
-```
+
 Python
 # Em collector.py
 # Constantes do Projeto
+```
 SEARCH_TERM = "Nubank"  # Mude para "Bitcoin", "PETR4", etc.
 SUBREDDIT = "farialimabets" # Mude para "investimentos", "brasil", etc.
 OUTPUT_FILE = "feelings.csv"
