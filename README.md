@@ -37,7 +37,7 @@ Manipulação de Dados: Pandas
 Gerenciamento de Segredos: python-dotenv
 
 Visualização: Plotly Express
-
+```
 📂 Estrutura do Projeto
 feeling-analyzer/
 ├── core/
@@ -54,6 +54,7 @@ feeling-analyzer/
 ├── requirements.txt           # Lista de dependências do projeto
 ├── sentimentos.csv            # (Ignorado) Banco de dados de saída
 └── README.md                  # Esta documentação
+````
 ⚙️ Instalação e Configuração
 Siga estes passos para configurar e rodar o projeto localmente.
 
@@ -134,3 +135,4 @@ Python
 SEARCH_TERM = "Nubank"  # Mude para "Bitcoin", "PETR4", etc.
 SUBREDDIT = "farialimabets" # Mude para "investimentos", "brasil", etc.
 OUTPUT_FILE = "feelings.csv"
+
