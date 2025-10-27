@@ -4,9 +4,9 @@ Feeling Analyzer é um painel de análise de sentimento em tempo real que monito
 🚀 Visão Geral
 Este projeto é dividido em dois componentes principais que rodam simultaneamente:
 
-O Coletor (collector.py): Um script de backend que se conecta à API do Reddit em tempo real. Ele "escuta" novos comentários, filtra aqueles que contêm sua palavra-chave, envia o texto para a API da OpenAI para análise e salva o resultado (id, timestamp, texto, sentimento) em um arquivo sentimentos.csv.
+O Coletor (collector.py): Um script de backend que se conecta à API do Reddit em tempo real. Ele "escuta" novos comentários, filtra aqueles que contêm sua palavra-chave, envia o texto para a API da OpenAI para análise e salva o resultado (id, timestamp, texto, sentimento) em um arquivo feelings.csv.
 
-O Dashboard (dashboard.py): Um aplicativo web, construído com Streamlit, que lê o arquivo sentimentos.csv e exibe gráficos e métricas sobre os sentimentos coletados, atualizando-se automaticamente.
+O Dashboard (dashboard.py): Um aplicativo web, construído com Streamlit, que lê o arquivo feelings.csv e exibe gráficos e métricas sobre os sentimentos coletados, atualizando-se automaticamente.
 
 (Recomendação: Tire um print da tela do seu dashboard.py rodando e insira aqui!) [INSIRA UM SCREENSHOT DO SEU DASHBOARD AQUI]
 
@@ -52,7 +52,7 @@ feeling-analyzer/
 ├── .env.example               # Arquivo de exemplo para configuração
 ├── .gitignore                 # Arquivos e pastas a serem ignorados pelo Git
 ├── requirements.txt           # Lista de dependências do projeto
-├── sentimentos.csv            # (Ignorado) Banco de dados de saída
+├── feelings.csv            # (Ignorado) Banco de dados de saída
 └── README.md                  # Esta documentação
 ````
 ⚙️ Instalação e Configuração
@@ -121,7 +121,7 @@ Terminal 2: O Dashboard
 Em um novo terminal (com o mesmo ambiente virtual ativado), inicie o servidor web do Streamlit.
 
 streamlit run dashboard.py
-O Streamlit abrirá automaticamente uma aba no seu navegador (normalmente em http://localhost:8501). O painel será atualizado automaticamente à medida que novos dados forem salvos no sentimentos.csv.
+O Streamlit abrirá automaticamente uma aba no seu navegador (normalmente em http://localhost:8501). O painel será atualizado automaticamente à medida que novos dados forem salvos no feelings.csv.
 
 🔧 Personalização
 Para monitorar um termo ou subreddit diferente, basta editar as constantes no topo do arquivo collector.py:
@@ -134,5 +134,6 @@ SEARCH_TERM = "Nubank"  # Mude para "Bitcoin", "PETR4", etc.
 SUBREDDIT = "farialimabets" # Mude para "investimentos", "brasil", etc.
 OUTPUT_FILE = "feelings.csv"
 ```
+
 
 
