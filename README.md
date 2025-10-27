@@ -67,7 +67,7 @@ Conta na OpenAI (para gerar chave de API)
 
 2. Clonar e Instalar
 Clone este repositório:
-
+```
 Bash
 
 git clone https://github.com/SEU-USUARIO/feeling-analyzer.git
@@ -75,7 +75,7 @@ cd feeling-analyzer
 Crie e ative um ambiente virtual:
 
 Bash
-
+ 
 # Windows
 python -m venv venv
 venv\Scripts\activate
@@ -128,11 +128,12 @@ O Streamlit abrirá automaticamente uma aba no seu navegador (normalmente em htt
 Para monitorar um termo ou subreddit diferente, basta editar as constantes no topo do arquivo collector.py:
 
 Python
-
+```
 # Em collector.py
 
 # Constantes do Projeto
 SEARCH_TERM = "Nubank"  # Mude para "Bitcoin", "PETR4", etc.
 SUBREDDIT = "farialimabets" # Mude para "investimentos", "brasil", etc.
 OUTPUT_FILE = "feelings.csv"
+
 
